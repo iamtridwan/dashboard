@@ -1,16 +1,7 @@
 <main>
-  <!-- splash section -->
-  <section [ngClass]="{ nextBg: setBg }" *ngIf="show">
-    <div class="logo">
-      <h1>
-        <div class="circle"></div>
-        <span>Zero</span>
-        Depression
-      </h1>
-    </div>
-  </section>
+ 
 
-  <div class="login-screen" *ngIf="!show">
+  <div class="login-screen" >
     <div class="content">
       <h1><span>Zero</span>Depression</h1>
 
@@ -20,14 +11,14 @@
       <form #form="ngForm">
         <div class="form-group">
           <label for="email">Your Email</label>
-          <input type="email" placeholder="Type email here" required />
+          <input type="email" placeholder="Type email here" name="email" required />
         </div>
         <div class="form-group">
           <label for="password">Input Your Password</label>
-          <input type="password" placeholder="Type email here" required />
+          <input type="password" placeholder="Type password here" name="password" required />
         </div>
         <p>Forget your password ?</p>
-        <button type="submit">Log In</button>
+        <button type="submit" routerLink='/dashboard'>Log In</button>
       </form>
 
       <h4 routerLink='/register' >No account yet ? Register</h4>

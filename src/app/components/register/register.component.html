@@ -1,0 +1,49 @@
+<main>
+ 
+  <div class="login-screen">
+    <div class="content">
+      <h1><span>Zero</span>Depression</h1>
+
+      <h3>Hello Councillor</h3>
+      <p>Please input your details to have acess to our dashboard</p>
+
+      <form #form="ngForm">
+          <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="name" placeholder="Type name here" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Type email here" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Your Phone Number</label>
+          <input type="number" placeholder="Type phone number here" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="profession">Your Profession </label>
+          <input type="text" placeholder="Type profession here" name="profession" required />
+        </div>
+        <div class="form-group">
+          <label for="bio">Your Bio </label>
+          <input type="text" placeholder="Write a short bio about yourself" name="bio" required />
+        </div>
+        <div class="form-group">
+          <label for="img">Your Image </label>
+          <input type="file" placeholder="Upload Image" name="img" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Set Your Password</label>
+          <input type="password" placeholder="Type password here" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirm">Confirm Password</label>
+          <input type="password" placeholder="Type password here" name="confirm" required />
+        </div>
+        <button type="submit" routerLink='/dashboard' >Register</button>
+      </form>
+
+      <h4 routerLink='/login' >Have  an account ? Log In</h4>
+    </div>
+  </div>
+</main>

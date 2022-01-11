@@ -1,0 +1,95 @@
+//variables
+
+$colors: (
+  pry: #ffa500,
+  sec: #02073e,
+  white: #fff,
+  bg: #fafbfc,
+);
+
+$w1: 400;
+$w2: 700;
+$desktop: 1024px;
+
+// function
+
+@function getColor($clr-name) {
+  @return map-get($colors, $clr-name);
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+
+section {
+  background-color: getColor(pry);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease-in-out;
+  z-index: 1;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    margin: 0;
+    font-weight: $w1;
+    color: getColor(sec);
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    @include desktop() {
+      width: 256px;
+      height: 80px;
+    }
+
+    span {
+      color: getColor(pry);
+      display: block;
+      font-weight: $w2;
+      z-index: 1;
+      margin-right: 2px;
+
+      @include desktop() {
+        margin-right: 6px;
+      }
+    }
+    .circle {
+      background: getColor(white);
+      position: absolute;
+      top: -35px;
+      left: -48px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      @include desktop() {
+        top: -8px;
+        left: -6px;
+      }
+    }
+  }
+}
+
+.nextBg {
+  background-color: getColor(white);
+  h1 {
+    span {
+      color: getColor(white);
+    }
+
+    .circle {
+      background-color: getColor(pry);
+    }
+  }
+}

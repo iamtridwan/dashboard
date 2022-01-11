@@ -1,0 +1,138 @@
+$colors: (
+  pry: #ffa500,
+  sec: #02073e,
+  white: #fff,
+  bg: #fafbfc,
+);
+
+$w1: 400;
+$w2: 700;
+$desktop: 1024px;
+
+// function
+
+@function getColor($clr-name) {
+  @return map-get($colors, $clr-name);
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+main {
+  background-color: getColor(bg);
+  min-height: 100vh;
+}
+
+.login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    width: 90%;
+    padding: 30px 0px 0px 0px;
+    @include desktop() {
+      padding: 40px 20px 20px 20px;
+      margin: 30px auto;
+      width: 30%;
+      background-color: getColor(white);
+      box-shadow: -4px 12px 12px rgba(0, 0, 0, 0.1),
+        -2px 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 32px;
+      text-align: center;
+      color: getColor(sec);
+      font-weight: $w1;
+      font-size: 36px;
+      span {
+        color: getColor(pry);
+        font-weight: $w2;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    form {
+      margin-top: 20px;
+      width: 100%;
+
+      .form-group {
+        margin: 20px 0;
+
+        label {
+          font-size: 18px;
+          margin: 12px 0px;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px 8px;
+          border: 2px solid getColor(pry);
+          border-radius: 2px;
+          margin-top: 8px;
+          display: block;
+          font-size: 18px;
+        }
+
+        input::placeholder {
+          color: #dadada;
+        }
+
+        input[type='file']{
+            width: 100%;
+          padding: 12px 8px;
+          border: 2px solid getColor(pry);
+          border-radius: 2px;
+          margin-top: 8px;
+          display: block;
+          font-size: 18px;
+          
+
+        }
+      }
+
+      p {
+        color: #ff0024;
+        text-align: right;
+        margin-top: -15px;
+         cursor: pointer;
+      }
+
+      button {
+        background-color: getColor(pry);
+        color: getColor(white);
+        width: 100%;
+        display: block;
+        border: none;
+        padding: 15px 10px;
+        font-size: 18px;
+        font-weight: $w2;
+        border-radius: 10px;
+        box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.4);
+        margin-top: 40px;
+      }
+    }
+    h4 {
+      text-align: center;
+      margin-top: 32px;
+      color: getColor(pry);
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}

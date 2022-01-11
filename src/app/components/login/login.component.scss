@@ -106,9 +106,9 @@ section {
 
   .content {
     width: 90%;
-    padding: 60px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
     @include desktop() {
-      padding: 90px 20px 20px 20px;
+      padding: 40px 20px 20px 20px;
       margin: 30px auto;
       width: 30%;
       background-color: getColor(white);
@@ -137,7 +137,7 @@ section {
     p {
       margin: 0;
       font-size: 20px;
-      line-height: 59px;
+    
     }
 
     form {
@@ -176,6 +176,7 @@ section {
         color: #ff0024;
         text-align: right;
         margin-top: -15px;
+         cursor: pointer;
       }
 
       button{
@@ -189,6 +190,7 @@ section {
           font-weight: $w2;
           border-radius: 10px;
           box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.4);
+          margin-top: 40px;
       }
     }
     h4{
@@ -197,6 +199,7 @@ section {
         color: getColor(pry);
         font-size: 18px;
         font-weight: 500;
+         cursor: pointer;
     }
   }
 }
