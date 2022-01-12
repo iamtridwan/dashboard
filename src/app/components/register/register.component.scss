@@ -87,7 +87,9 @@ main {
           display: block;
           font-size: 18px;
         }
-
+        input:focus {
+          outline: 2px solid getColor(pry);
+        }
         input::placeholder {
           color: #dadada;
         }
@@ -98,19 +100,18 @@ main {
           opacity: 0.2;
         }
 
-        .upload{
+        .upload {
           width: 100%;
-          padding:8px;
+          padding: 8px;
           border: 2px solid getColor(pry);
           border-radius: 2px;
           margin-top: 60px;
           display: block;
           font-size: 18px;
           position: relative;
-
         }
 
-        .upload::before{
+        .upload::before {
           position: absolute;
           content: "Your Image";
           top: -32px;
