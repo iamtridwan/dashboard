@@ -144,15 +144,16 @@ main {
         height: 40%;
       }
     }
-    img::after {
-      content: "";
-      width: 20%;
-      height: 20%;
-      left: 0;
-      top: 0;
-      position: absolute;
-      background-color: getColor(rgb(26, 2, 2));
-    }
+    // img::after {
+    //   content: "";
+    //   width: 20%;
+    //   height: 20%;
+    //   left: 0;
+    //   top: 0;
+    //   position: absolute;
+    //   background-color: getColor(rgb(26, 2, 2));
+    //   z-index: 1;
+    // }
 
     h2 {
       margin: 0;
