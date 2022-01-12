@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserLogin } from 'src/app/models/user-login';
 
 @Component({
   selector: 'app-login',
@@ -7,29 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  // setBg: boolean = false;
-  // show: boolean = true
+  formValid = true;
 
+  user: UserLogin = {
+    email: '',
+    password: '',
+  };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    // this.changeBg()
-    // this.changeScreen()
+  ngOnInit(): void {}
 
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      this.formValid = !this.formValid
+      this.router.navigate(['/dashboard']);
+    } else {
+      this.formValid = !this.formValid;
+    }
   }
-
-  // change bg
-  // changeBg() {
-  //   setTimeout(() => {
-  //     this.setBg = !this.setBg;
-  //   }, 1000);
-  // }
-
-  // // change to main screen
-  // changeScreen() {
-  //   setTimeout(() => {
-  //     this.show = !this.show
-  //   }, 3500);
-  // }
 }

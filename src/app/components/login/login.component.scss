@@ -168,6 +168,13 @@ section {
         input::placeholder {
           color: #dadada;
         }
+
+        .error{
+          text-align: left;
+          background-color: #ff0024;
+          color: getColor(white);
+          padding: 10px 5px;
+        }
       }
 
       
