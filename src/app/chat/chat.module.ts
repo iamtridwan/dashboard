@@ -5,6 +5,7 @@ import { ActiveChatComponent } from './active-chat/active-chat.component';
 import { NewChatComponent } from './new-chat/new-chat.component';
 import { AllChatComponent } from './all-chat/all-chat.component';
 import { PrevChatComponent } from './prev-chat/prev-chat.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const route: Routes = [
@@ -12,6 +13,7 @@ const route: Routes = [
   { path: 'chat/active', component: ActiveChatComponent }, 
   { path: 'chat/previous', component: PrevChatComponent }, 
   { path: 'chat/all', component: AllChatComponent }, 
+  { path: 'chat/admin', component: AdminComponent }, 
 ]
 
 @NgModule({
@@ -19,7 +21,8 @@ const route: Routes = [
     ActiveChatComponent,
     NewChatComponent,
     AllChatComponent,
-    PrevChatComponent
+    PrevChatComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
