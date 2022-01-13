@@ -7,16 +7,12 @@ $colors: (
 
 $w1: 400;
 $w2: 700;
-$desktop: 1024px;
-
-// function
-
 @function getColor($clr-name) {
   @return map-get($colors, $clr-name);
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{1024px}) {
     @content;
   }
 }

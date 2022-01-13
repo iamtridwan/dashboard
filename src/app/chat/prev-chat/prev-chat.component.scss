@@ -7,7 +7,7 @@ $colors: (
 
 $w1: 400;
 $w2: 700;
-$desktop: 1024px;
+
 
 // function
 
@@ -16,7 +16,7 @@ $desktop: 1024px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{1024px}) {
     @content;
   }
 }

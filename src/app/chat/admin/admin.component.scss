@@ -7,16 +7,13 @@ $colors: (
 
 $w1: 400;
 $w2: 700;
-$desktop: 1024px;
-
-// function
 
 @function getColor($clr-name) {
   @return map-get($colors, $clr-name);
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{1024px}) {
     @content;
   }
 }
@@ -45,8 +42,6 @@ main {
       color: getColor(sec);
       font-weight: $w1;
       margin: 0;
-      font-size: 36px;
-
       span {
         color: getColor(pry);
         font-weight: $w2;
@@ -55,7 +50,7 @@ main {
   }
   .chats {
     width: 90%;
-    margin: 10px auto;
+    margin: 10px auto 20px auto;
     background: getColor(white);
     padding: 10px;
     .ellipses {
@@ -79,10 +74,8 @@ main {
 
     section {
       margin-top: 5px;
-
       .intro {
         display: flex;
-        align-items: flex-start;
         img {
           width: 45px;
           height: 45px;
@@ -191,7 +184,6 @@ main {
         }
       }
     }
-
     .counsellor-chat {
       display: flex;
       margin: 40px 0;
@@ -211,12 +203,10 @@ main {
         padding: 10px;
         width: 230px;
       }
-
       p:first-child {
         margin-top: 0;
         position: relative;
       }
-
       p:first-child::after {
         content: "";
         height: 20px;
@@ -256,7 +246,6 @@ main {
         margin-right: 15px;
         transform: translateY(-10px);
       }
-
       p {
         margin: 10px 0 0 0;
         background-color: getColor(pry);
@@ -281,7 +270,6 @@ main {
         position: absolute;
       }
     }
-
     .input-reply {
       position: relative;
       input {
@@ -290,29 +278,28 @@ main {
         border-radius: 10px;
         border: 2px solid getColor(pry);
       }
-
       input:focus {
-        
         outline: 2px solid getColor(pry);
       }
-
-      button {
-        background: getColor(pry) url(../../../assets/replyrArow.png) no-repeat;
-        background-position: 3%;
-        background-size: 20% 50%;
+     button {
+        background-color: getColor(pry);
+        display: flex;
+        align-items: center;
         color: getColor(white);
         border: none;
-        padding: 10px;
         width: 30%;
+        padding: 11px;
         position: absolute;
         top: 0;
         right: 0;
         font-size: 18px;
         border-radius: 0 10px 10px 0;
-        cursor: pointer;
-
-        @include desktop(){
-          background-position: 8%;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+        p{
+          margin: 0 0 0 8px;
         }
       }
     }

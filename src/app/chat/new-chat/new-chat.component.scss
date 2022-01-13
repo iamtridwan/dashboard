@@ -7,16 +7,13 @@ $colors: (
 
 $w1: 400;
 $w2: 700;
-$desktop: 1024px;
-
-// function
 
 @function getColor($clr-name) {
   @return map-get($colors, $clr-name);
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{1024px}) {
     @content;
   }
 }
@@ -144,17 +141,6 @@ main {
         height: 40%;
       }
     }
-    // img::after {
-    //   content: "";
-    //   width: 20%;
-    //   height: 20%;
-    //   left: 0;
-    //   top: 0;
-    //   position: absolute;
-    //   background-color: getColor(rgb(26, 2, 2));
-    //   z-index: 1;
-    // }
-
     h2 {
       margin: 0;
       color: getColor(white);
@@ -163,7 +149,7 @@ main {
       font-weight: 700;
       line-height: 31px;
       letter-spacing: -1.5px;
-      //   text-align: center;
+
     }
   }
 }
