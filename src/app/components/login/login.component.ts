@@ -10,7 +10,7 @@ import { UserLogin } from 'src/app/models/user-login';
 })
 export class LoginComponent implements OnInit {
   formValid = true;
-  eyeImage = '../../../assets/mascara.png';
+  eyeImage = '../../../assets/eyelashes.png';
   hidePassword = true;
   user: UserLogin = {
     email: '',
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   showPassword() {
     this.hidePassword = !this.hidePassword;
     this.eyeImage = this.hidePassword
-      ? '../../../assets/mascara.png'
+      ? '../../../assets/eyelashes.png'
       : '../../../assets/eye.png';
   }
 }
