@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/models/user-login';
 
@@ -10,7 +10,8 @@ import { UserLogin } from 'src/app/models/user-login';
 })
 export class LoginComponent implements OnInit {
   formValid = true;
-
+  eyeImage = '../../../assets/mascara.png';
+  hidePassword = true;
   user: UserLogin = {
     email: '',
     password: '',
@@ -22,10 +23,17 @@ export class LoginComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      this.formValid = !this.formValid
+      this.formValid = !this.formValid;
       this.router.navigate(['/dashboard']);
     } else {
       this.formValid = !this.formValid;
     }
+  }
+
+  showPassword() {
+    this.hidePassword = !this.hidePassword;
+    this.eyeImage = this.hidePassword
+      ? '../../../assets/mascara.png'
+      : '../../../assets/eye.png';
   }
 }

@@ -140,6 +140,7 @@ section {
 
       .form-group {
         margin: 20px 0;
+        position: relative;
 
         label {
           font-size: 18px;
@@ -167,6 +168,14 @@ section {
           background-color: #ff0024;
           color: getColor(white);
           padding: 10px 5px;
+        }
+        img{
+          width: 28px;
+          height: 28px;
+          position: absolute;
+          top: 45px;
+          right: 10px;
+          opacity: 0.5;
         }
       }
 

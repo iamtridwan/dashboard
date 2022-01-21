@@ -79,6 +79,10 @@ main {
   font-size: 18px;
 }
 
+.login-screen .content form .form-group input:focus {
+  outline: 2px solid #ffa500;
+}
+
 .login-screen .content form .form-group input::-webkit-input-placeholder {
   color: #dadada;
 }
@@ -95,14 +99,35 @@ main {
   color: #dadada;
 }
 
-.login-screen .content form .form-group input[type='file'] {
+.login-screen .content form .form-group input[type="file"] {
+  padding: 0;
+  margin-top: 0px;
+  opacity: 0.2;
+  border: none;
+}
+
+.login-screen .content form .form-group .upload {
   width: 100%;
-  padding: 12px 8px;
+  padding: 8px;
   border: 2px solid #ffa500;
   border-radius: 2px;
-  margin-top: 8px;
+  margin-top: 60px;
   display: block;
   font-size: 18px;
+  position: relative;
+}
+
+.login-screen .content form .form-group .upload::before {
+  position: absolute;
+  content: "Your Image";
+  top: -32px;
+  left: 0;
+}
+
+.login-screen .content form .form-group .error {
+  background-color: #ff0024;
+  color: #fff;
+  padding: 10px 5px;
 }
 
 .login-screen .content form p {
